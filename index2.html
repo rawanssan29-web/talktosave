@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فضفضة | Fadfada</title>
+<meta name="description" content="جلسات فردية مع معالجين نفسيين مرخّصين بالعربية والإنجليزية">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e3a3c;--deep:#082829;--mist:#e8f0ee;--paper:#f7faf9;--line:#cddcd8;--gold:#d19a2e;--tx:#14292a;--mut:#4f6a6a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--tx);font:17px/1.8 "IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif}
+h1,h2,h3{font-family:"Readex Pro","IBM Plex Sans Arabic",Tahoma,sans-serif;line-height:1.35;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(247,250,249,.94);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font:600 22px "Readex Pro",sans-serif;text-decoration:none;color:var(--ink)}
+.nav nav{display:flex;gap:20px;align-items:center;font-size:15px}
+.nav nav a{text-decoration:none;color:var(--mut)}
+.nav nav a:hover{color:var(--ink)}
+.lang{border:1px solid var(--ink);background:none;color:var(--ink);border-radius:8px;padding:3px 12px;font:inherit;font-size:14px;cursor:pointer}
+.hero{background:var(--ink);color:#fff;overflow:hidden;position:relative}
+.hero .wrap{padding-top:72px;padding-bottom:84px;position:relative}
+.hero h1{font-size:clamp(32px,6vw,58px);max-width:640px;font-weight:600}
+.hero p{max-width:520px;color:#c6dcd8;margin:18px 0 28px}
+.btn{display:inline-block;background:var(--gold);color:var(--deep);font-weight:600;text-decoration:none;border:0;border-radius:10px;padding:12px 26px;font:600 17px "IBM Plex Sans Arabic",sans-serif;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn:focus-visible,.lang:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.rings{position:absolute;inset-inline-end:-120px;top:50%;width:520px;height:520px;transform:translateY(-50%);pointer-events:none}
+.rings i{position:absolute;inset:0;margin:auto;border:1.5px solid rgba(209,154,46,.5);border-radius:50%;animation:ripple 7s ease-out infinite}
+.rings i:nth-child(1){width:140px;height:140px}
+.rings i:nth-child(2){width:140px;height:140px;animation-delay:2.3s}
+.rings i:nth-child(3){width:140px;height:140px;animation-delay:4.6s}
+@keyframes ripple{from{transform:scale(1);opacity:.9}to{transform:scale(3.8);opacity:0}}
+@media (prefers-reduced-motion:reduce){.rings i{animation:none;opacity:.35}.rings i:nth-child(2){transform:scale(2)}.rings i:nth-child(3){transform:scale(3)}}
+section{padding:64px 0}
+section h2{font-size:clamp(24px,4vw,34px);margin-bottom:28px;color:var(--ink)}
+.steps{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:12px}
+.steps li::before{content:counter(s);display:block;font:600 28px "Readex Pro",sans-serif;color:var(--gold)}
+.plans{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column}
+.plan.hl{border:2px solid var(--ink);background:var(--mist)}
+.plan h3{font-size:19px}
+.price{font:600 40px "Readex Pro",sans-serif;color:var(--ink);margin:10px 0 0}
+.price s{font-size:18px;color:var(--mut);font-weight:400;margin-inline-start:8px}
+.per{color:var(--mut);font-size:15px;margin:0 0 14px}
+.plan ul{margin:0 0 20px;padding-inline-start:20px;color:var(--mut);font-size:15.5px}
+.plan .btn{margin-top:auto;text-align:center;padding:10px 16px}
+.band{background:var(--mist)}
+.team{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.person{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+.person b{display:block;font-family:"Readex Pro",sans-serif}
+.person span{display:block;color:var(--mut);font-size:15px}
+.note{color:var(--mut);font-size:15px;margin-top:16px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--mut)}
+form{display:grid;gap:14px;max-width:560px}
+label{display:grid;gap:4px;font-weight:500;font-size:15.5px}
+input,select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--tx);width:100%}
+#msg{font-weight:600;color:var(--ink);min-height:1.6em}
+footer{background:var(--deep);color:#b4cfcb;padding:34px 0;font-size:14.5px}
+footer b{color:#fff}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top" data-i="brand"></a>
+<nav><a href="#plans" data-i="nPlans"></a><a href="#faq" data-i="nFaq"></a><button class="lang" id="lang" type="button">English</button></nav>
+</div></header>
+
+<div class="hero" id="top"><div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="wrap">
+<h1 data-i="hTitle"></h1>
+<p data-i="hSub"></p>
+<a class="btn" href="#book" data-pick="first" data-i="hCta"></a>
+</div></div>
+
+<section><div class="wrap">
+<h2 data-i="howT"></h2>
+<ol class="steps"><li data-i="s1"></li><li data-i="s2"></li><li data-i="s3"></li></ol>
+</div></section>
+
+<section class="band" id="privacy"><div class="wrap"><h2 data-i="confT"></h2><p style="max-width:640px" data-i="confA"></p><p class="note" style="max-width:640px" data-i="confB"></p></div></section>
+
+<section id="plans"><div class="wrap">
+<h2 data-i="planT"></h2>
+<div class="plans">
+<div class="plan hl"><h3 data-i="p1n"></h3><p class="price"><span id="pr1"></span><s id="pr1o"></s></p><p class="per" data-i="p1d"></p><ul><li data-i="p1a"></li><li data-i="p1b"></li></ul><a class="btn" href="#book" data-pick="first" data-i="choose"></a></div>
+<div class="plan"><h3 data-i="p2n"></h3><p class="price"><span id="pr2"></span></p><p class="per" id="pp2"></p><ul><li data-i="p2a"></li><li data-i="p2b"></li></ul><a class="btn" href="#book" data-pick="pack4" data-i="choose"></a></div>
+<div class="plan"><h3 data-i="p3n"></h3><p class="price"><span id="pr3"></span></p><p class="per" id="pp3"></p><ul><li data-i="p3a"></li><li data-i="p3b"></li></ul><a class="btn" href="#book" data-pick="pack6" data-i="choose"></a></div>
+</div>
+<p class="note" data-i="planNote"></p>
+</div></section>
+
+
+<section class="band" id="book"><div class="wrap">
+<h2 data-i="bookT"></h2>
+<form id="f">
+<label><span data-i="fName"></span><input name="name" required autocomplete="name"></label>
+<label><span data-i="fMail"></span><input name="email" type="email" required autocomplete="email"></label>
+<label><span data-i="fPhone"></span><input name="phone" type="tel" required autocomplete="tel"></label>
+<label><span data-i="fCountry"></span><input name="country" required></label>
+<label><span data-i="fPlan"></span><select name="plan" id="plan"></select></label>
+<label><span data-i="fLang"></span><select name="lang" id="slang"></select></label>
+<label><span data-i="fTime"></span><textarea name="time" rows="2"></textarea></label>
+<button class="btn" type="submit" data-i="fSend"></button>
+<div id="msg" role="status"></div>
+</form>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<h2 data-i="faqT"></h2>
+<details><summary data-i="q1"></summary><p data-i="a1"></p></details>
+<details><summary data-i="q3"></summary><p data-i="a3"></p></details>
+</div></section>
+
+<footer><div class="wrap"><b data-i="brand"></b><p data-i="foot"></p></div></footer>
+
+<script>
+/* ===== Edit these values ===== */
+var CONFIG={email:"rawanssan29@gmail.com",key:"9d110365-9fde-4355-9b30-ac446216228c",first:30,firstFull:55,regular:55,pack4:200,pack6:270};
+/* ============================= */
+var T={
+ar:{brand:"فضفضة",nPlans:"الأسعار",nTeam:"المختصون",nFaq:"أسئلة",
+hTitle:"مساحة آمنة تتحدث فيها، ونسمعك.",
+hSub:"جلسات فردية بالصوت أو الفيديو مع معالجين نفسيين مرخّصين، بخصوصية كاملة وبالعربية أو الإنجليزية.",
+hCta:"احجز جلستك الأولى بـ 30$",
+howT:"كيف تعمل الجلسات",confT:"سريتك أولًا",confA:"كل ما تقوله في الجلسة يبقى بينك وبين المختص. لا نسجّل الجلسات، ولا نشارك بياناتك مع أي جهة، ونستخدم بريدك ورقم هاتفك لتنظيم الموعد فقط.",confB:"يُستثنى من ذلك الحالات التي يوجب فيها القانون الإفصاح لحماية حياتك أو حياة غيرك.",s1:"اختر الباقة وأرسل طلب الحجز بالموعد المناسب لك.",s2:"نؤكد الموعد معك ونرسل رابط الجلسة بالبريد الإلكتروني.",s3:"تحدّث بحرية مع مختص مرخّص، وبسرية تامة.",
+planT:"الباقات",choose:"اختر هذه الباقة",
+p1n:"الجلسة الأولى",p1d:"جلسة واحدة، 60 دقيقة",p1a:"سعر تعريفي للجلسة الأولى",p1b:"بعدها 55$ للجلسة العادية",
+p2n:"4 جلسات شهريًا",p2a:"جلسة أسبوعية بموعد ثابت",p2b:"60 دقيقة لكل جلسة",
+p3n:"6 جلسات شهريًا",p3a:"متابعة مكثفة بأقل سعر للجلسة",p3b:"60 دقيقة لكل جلسة",
+per:"للجلسة",perMonth:"شهريًا",
+planNote:"الأسعار بالدولار الأمريكي. اطلب إلغاء الجلسة أو تأجيلها قبل 24 ساعة من موعدها.",
+teamT:"المختصون",tName:"اسم المعالج/ة",tRole:"معالج نفسي مرخّص",tLic:"رقم الترخيص والجهة المرخِّصة: ______",
+bookT:"اطلب حجزك",fName:"الاسم",fMail:"البريد الإلكتروني",fPhone:"رقم الهاتف (مع رمز الدولة)",fCountry:"بلد الإقامة",fPlan:"الباقة",fLang:"لغة الجلسة",fTime:"المواعيد المناسبة لك (اليوم، الساعة، المنطقة الزمنية)",fSend:"أرسل طلب الحجز",
+sent:"فتحنا لك رسالة بريد جاهزة. اضغط إرسال لإتمام الطلب.",ok:"وصلنا طلبك. سنتواصل معك قريبًا لتأكيد الموعد.",
+plans:{first:"الجلسة الأولى (30$)",pack4:"4 جلسات شهريًا (200$)",pack6:"6 جلسات شهريًا (270$)"},langs:{ar:"العربية",en:"English"},
+faqT:"أسئلة شائعة",
+q1:"هل الخدمة للطوارئ؟",a1:"لا. إذا كنت في خطر أو تفكر بإيذاء نفسك، تواصل فورًا مع خدمات الطوارئ في بلدك أو مع شخص تثق به قريب منك.",
+
+q3:"هل الجلسات سرية؟",a3:"نلتزم بسرية الجلسات ولا نسجّلها. نستخدم بياناتك لتنظيم الموعد فقط.",
+foot:"هذه الخدمة لا تغني عن الرعاية الطارئة. الجلسات تُقدَّم وفق ترخيص المختص ولمن يقيمون في البلدان التي يشملها هذا الترخيص."},
+en:{brand:"Fadfada",nPlans:"Pricing",nTeam:"Specialists",nFaq:"FAQ",
+hTitle:"A safe space to talk, and we listen.",
+hSub:"One-to-one voice or video sessions with licensed psychologists. Fully private, in Arabic or English.",
+hCta:"Book your first session for $30",
+howT:"How sessions work",confT:"Your privacy comes first",confA:"Everything you say in a session stays between you and your specialist. We do not record sessions, we do not share your details with anyone, and we use your email and phone number only to arrange your appointment.",confB:"The only exception is where the law requires disclosure to protect your life or the lives of others.",s1:"Choose a plan and send your booking request with a time that suits you.",s2:"We confirm the time with you and email the session link.",s3:"Talk freely with a licensed specialist, in complete confidence.",
+planT:"Plans",choose:"Choose this plan",
+p1n:"First session",p1d:"One session, 60 minutes",p1a:"Introductory price for your first session",p1b:"Then $55 per regular session",
+p2n:"4 sessions a month",p2a:"A weekly session at a fixed time",p2b:"60 minutes each",
+p3n:"6 sessions a month",p3a:"Closer follow-up at the lowest price per session",p3b:"60 minutes each",
+per:"per session",perMonth:"per month",
+planNote:"Prices are in US dollars. Cancel or reschedule at least 24 hours before your session.",
+teamT:"Our specialists",tName:"Therapist name",tRole:"Licensed psychologist",tLic:"License number and issuing body: ______",
+bookT:"Request your booking",fName:"Name",fMail:"Email",fPhone:"Phone number (with country code)",fCountry:"Country of residence",fPlan:"Plan",fLang:"Session language",fTime:"Times that suit you (day, hour, time zone)",fSend:"Send booking request",
+sent:"We opened a ready email for you. Press send to complete your request.",ok:"We received your request and will contact you soon to confirm your time.",
+plans:{first:"First session ($30)",pack4:"4 sessions a month ($200)",pack6:"6 sessions a month ($270)"},langs:{ar:"العربية",en:"English"},
+faqT:"Frequently asked questions",
+q1:"Is this an emergency service?",a1:"No. If you are in danger or thinking of harming yourself, contact your local emergency services or someone you trust near you right away.",
+
+q3:"Are sessions confidential?",a3:"We keep sessions confidential and do not record them. We use your details only to arrange your appointment.",
+foot:"This service does not replace emergency care. Sessions are delivered under each specialist's license and only to residents of the countries it covers."}
+};
+var lang="ar";
+function fmt(n){return "$"+n}
+function render(){
+ var d=T[lang],h=document.documentElement;
+ h.lang=lang;h.dir=lang==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=d[e.getAttribute("data-i")]});
+ document.getElementById("lang").textContent=lang==="ar"?"English":"العربية";
+ document.getElementById("pr1").textContent=fmt(CONFIG.first);
+ document.getElementById("pr1o").textContent=fmt(CONFIG.firstFull);
+ document.getElementById("pr2").textContent=fmt(CONFIG.pack4);
+ document.getElementById("pr3").textContent=fmt(CONFIG.pack6);
+ document.getElementById("pp2").textContent=fmt(CONFIG.pack4/4)+" "+d.per+" · "+d.perMonth;
+ document.getElementById("pp3").textContent=fmt(Math.round(CONFIG.pack6/6*10)/10)+" "+d.per+" · "+d.perMonth;
+ var ps=document.getElementById("plan"),cur=ps.value||"first";
+ ps.innerHTML=Object.keys(d.plans).map(function(k){return '<option value="'+k+'">'+d.plans[k]+'</option>'}).join("");
+ ps.value=cur;
+ var sl=document.getElementById("slang"),cl=sl.value||lang;
+ sl.innerHTML=Object.keys(d.langs).map(function(k){return '<option value="'+k+'">'+d.langs[k]+'</option>'}).join("");
+ sl.value=cl;
+}
+document.getElementById("lang").onclick=function(){lang=lang==="ar"?"en":"ar";render()};
+document.querySelectorAll("[data-pick]").forEach(function(a){a.addEventListener("click",function(){document.getElementById("plan").value=a.getAttribute("data-pick")})});
+document.getElementById("f").addEventListener("submit",function(e){
+ e.preventDefault();
+ var f=e.target,d=T[lang],m=document.getElementById("msg"),b=f.querySelector("button"),el=f.elements;
+ var data={name:el["name"].value,email:el["email"].value,phone:el["phone"].value,country:el["country"].value,plan:d.plans[el["plan"].value],session_language:el["lang"].value,preferred_times:el["time"].value};
+ function viaMail(){
+  var body=Object.keys(data).map(function(k){return k+": "+data[k]}).join("\n");
+  location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Booking request / \u0637\u0644\u0628 \u062d\u062c\u0632")+"&body="+encodeURIComponent(body);
+  m.textContent=d.sent;
+ }
+ if(!CONFIG.key){viaMail();return}
+ b.disabled=true;
+ data.access_key=CONFIG.key;data.subject="Booking request / \u0637\u0644\u0628 \u062d\u062c\u0632";data.from_name="Fadfada";
+ fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(data)})
+  .then(function(r){return r.json()})
+  .then(function(j){if(j.success){m.textContent=d.ok;f.reset()}else{viaMail()}})
+  .catch(function(){viaMail()})
+  .then(function(){b.disabled=false});
+});
+render();
+</script>
+</body>
+</html>
